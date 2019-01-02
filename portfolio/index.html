@@ -2,11 +2,38 @@
 <!--
 Name: Jake Oak
 Date Created: 12/28/18
-Most recent revision:  
+Most recent revision: 1/1/19 
 -->
 <html lang="en">
         <head>
             <title>Jake Oak's Portfolio</title>
+            <link href="styles/main.css" rel="stylesheet" type="text/css" />
+            <style>
+                caption {
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    margin-bottom: 8px;
+                }
+                table, th, td {
+                    border: 1px solid #0d1f2d;
+                    border-collapse: collapse;
+                    padding: 5px 10px;
+                }
+                table {
+                    width: 90%;
+                    margin: auto;
+                }
+                tr {
+                    height: 30px;
+                }
+                th {
+                    background-color: #546a7b;
+                    color: #f2eded;
+                }
+                tbody tr:nth-child(odd) {
+                    background-color: #e4c3ad;
+                }
+            </style>
             </head>
     <body>
             <header>
@@ -14,10 +41,7 @@ Most recent revision:
             </header>
             
         <nav>
-            <hr />
             <!-- We need to add links to projects.html, contact.html, and testimonials.html -->
-            <p>Will hold navigation links></p>
-            <hr />
             <p><a href="projects.html">Projects</a></p>
             <p><a href="contact.html">Contact Me</a></p>
             <p><a href="testimonials.html">Testimonials</a></p>
@@ -35,12 +59,14 @@ Most recent revision:
             <img src="images/workexp.jpg" alt="" style="height: 150px;" />
                     <table>
                         <caption>Employment History</caption>
+                        <thead>
                         <tr>
                             <th>Years of Employment</th>
                             <th>Title</th>
                             <th>Company</th>
                         </tr>
-                        
+                        </thead>
+                        <tbody>
                         <tr>
                             <td>2018-Present</td>
                             <td>Roasting Operator</td>
@@ -58,6 +84,7 @@ Most recent revision:
                             <td>Student</td>
                             <td>University of Minnesota - Twin Cities</td>
                         </tr>
+                        </tbody>
                      </table>
                 </article>
                 <article id="hobbies">
@@ -97,7 +124,6 @@ Most recent revision:
             </section>
 
             <footer>
-                <hr />
                 <p>&copy; 2018 Jake Oak. All rights reserved.</p>
             </footer>
     </body>

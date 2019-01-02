@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+    Name: Jake Oak
+    Date Created: 12/30/2018
+    Most recent revision: 12/31/2018
+-->
+<html lang="en">
+    <head>
+        <title>Contact Us</title>
+    </head>
+<body>
+    <header>
+        <h1>Sprout Vegan Restaurant</h1>
+    </header>
+
+    <nav>
+        <hr />
+        <p><a href="index.html">Home</a></p>
+        <p><a href="menu.html">Menu</a></p>
+        <p><a href="contact.html">Contact Us</a></p>
+<!--<hr /> if horizontal is needed-->
+    </nav>
+<section>
+    <article id="foods">
+        <fieldset>
+        <form action="submit.html" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"> <br />
+        
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"> <br />
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone"> <br />
+
+            <label for="inquiry">Reason for Inquiry:</label>
+            <select id="inquiry" name="inquiry">
+                <option value="default" selected>Catering</option>
+                <option value="party">Private Party</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+            </select>
+            <br />
+            <label for="info">Additional Information</label>
+            <textarea id="info" name="info">
+            </textarea>
+
+                <legend>Have you been to the restaurant?</legend>
+                <input type="radio" id="choice1" name="questionnaire" value="no" checked>
+                <label for="choice1" >No</label>
+                <input type="radio" id="choice2" name="questionnaire" value="yes">
+                <label for="choice2">Yes</label><br />
+
+            <legend>Best days to contact you:</legend>
+            <input type="checkbox" id="monday" name="available" value="monday">
+            <label for="monday">M</label>
+            <input type="checkbox" id="tuesday" name="available" value="tuesday">
+            <label for="tuesday">T</label>
+            <input type="checkbox" id="wednesday" name="available" value="wednesday">
+            <label for="wednesday">W</label>
+            <input type="checkbox" id="thursday" name="available" value="thursday">
+            <label for="thursday">Th</label>
+            <input type="checkbox" id="friday" name="available" value="friday">
+            <label for="friday">F</label><br />
+
+            <input type="submit" name="submit" value="Send Request">
+        </fieldset>
+        </form>
+    </article>
+</section>
+
+<footer>
+        <hr />
+        32 Sap Avenue, Seattle, WA, 98115 <br />
+        (555)-555-5555
+    </footer>
+</body>
+</html>
