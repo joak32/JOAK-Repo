@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/JavaScript" src="luckySevens.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Lucky Sevens</h1>
+            <form name="wallet" onsubmit="return validateItems();">
+                <!--onreset="resetForm();" class="form-inline"> -->
+                <div class="form-group">
+                    <label for="startingBet">Starting Bet:</label>
+                    <input type="number" class="form-control" id="startingBet" style="display: block; margin: 0 auto;" >
+        <br />
+        <button type="submit" id="submitButton" class="btn btn-default">Play</button>
+        <!-- onclick="validateItems();" -->
+        </form>
+        </div>
+        <span id="startingBet"></span>
+        <!-- Results-->
+
+        <table id="results" class="table table-striped" style="display:block;">
+                <thead>
+                    <tr>
+                        <th>Operation</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Starting Bet</td>
+                        <td><span id="initialBet"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Total Rolls Before Going Broke</td>
+                        <td><span id="totalRolls"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Highest Amount Won</td>
+                        <td><span id="highestAmount"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Roll Count at Highest Amount Won</td>
+                        <td><span id="rollAtHigh"></span></td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
