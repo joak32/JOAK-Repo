@@ -25,8 +25,10 @@ function validateItems() {
     var rollArray = new Array();
     var moneyArray = new Array();
     var rolls = 0;
+    var maxMoney = 0;
+    var maxRoll = 0;
 
-// Will check if startingNum is greater than 0
+    // Will check if startingNum is greater than 0
     if (gameMoney <= 0) {
         alert("Insufficient funds; starting bet must be greater than 0.00");
         document.forms["wallet"]["startingBet"].parentElement.className = "form-group has-error";
@@ -35,35 +37,42 @@ function validateItems() {
     }
     else {
         while (gameMoney > 0) {
-            var firstDice = Math.floor(Math.random() * 6) + 1;
-            var secondDice = Math.floor(Math.random() * 6) + 1;
+            var firstDice = rollDice();
+            var secondDice = rollDice();
             var diceTotal = firstDice + secondDice;
+            rolls++;
 
             if (diceTotal == 7) {
                 gameMoney += 4;
+                if (gameMoney > maxMoney) {
+                    maxMoney += gameMoney;
+                    maxRoll = rolls;
+                }
             }
             else {
                 gameMoney -= 1;
             }
-            rolls++;
-            rollArray.push(rolls);
+            //rollArray.push(rolls);
             moneyArray.push(gameMoney);
         }
 
-        var countRolls = rollArray.length;
-        var maxMoney = findMax(moneyArray);
-        var rollsMaxIndex = rollArray.indexOf(maxMoney);
-        var rollAtMax = rollArray[rollsMaxIndex];
+        //var countRolls = rollArray.length;
+        //var maxMoney = findMax(moneyArray);
+        //var rollsMaxIndex = rollArray.indexOf(maxMoney);
+       // var rollAtMax = rollArray[rollsMaxIndex];
     }
 
-//Game Over
+    //Game Over
+    
+    // We are returning false so that the form doesn't submit 
+    // and so that we can see the results
+    //return false;
     document.getElementById("results").style.display = "inline"; //consider inline
+    document.getElementById("resultHead").style.display = "inline";
     document.getElementById("submitButton").innerText = "Recalculate";
-    document.getElementById("initialBet").innerText = ("$" + startingNum); //Number(num1) + Number(num2);
-    document.getElementById("totalRolls").innerText = countRolls;
-    document.getElementById("highestAmount").innerText = maxMoney;
-    document.getElementById("rollAtHigh").innerText = rollAtMax;
-   // We are returning false so that the form doesn't submit 
-   // and so that we can see the results
-   return false;
+    document.getElementById("initialBet").innerText = ("$" + startingNum + ".00"); //Number(num1) + Number(num2);
+    document.getElementById("totalRolls").innerText = rolls;
+    document.getElementById("highestAmount").innerText = ("$" + maxMoney + ".00");
+    document.getElementById("rollAtHigh").innerText = maxRoll;
+    return false;
 }
