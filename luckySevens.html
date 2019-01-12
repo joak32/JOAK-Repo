@@ -19,7 +19,12 @@
                     </div>-->
                     <div class="form-group">
                     <label for="startingBet">Starting Bet:</label>
-                    <input type="number" class="form-control" id="startingBet" style="display: block; margin: 0 auto;" >
+                    <div class="input-group-prepend">
+                            <div class="input-group-text">$</div>
+                            <!-- Can do a width:auto; but need to wrap this all in a div so it doesn't get centered-->
+                    <input type="number" class="form-control" id="startingBet"
+                        style="display: block; margin: 0 auto;" placeholder="Enter dollar amount:" >
+                    
         <br />
         <button type="submit" id="submitButton" class="btn btn-default">Play</button>
         <!-- onclick="validateItems();" -->
