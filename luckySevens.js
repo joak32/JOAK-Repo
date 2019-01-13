@@ -22,7 +22,6 @@ function findMax() {
 function validateItems() {
     var startingNum = Number(document.forms["wallet"]["startingBet"].value);
     var gameMoney=startingNum;
-    var rollArray = new Array();
     var moneyArray = new Array();
     var rolls = 0;
     var maxMoney = 0;
@@ -45,7 +44,7 @@ function validateItems() {
             if (diceTotal == 7) {
                 gameMoney += 4;
                 if (gameMoney > maxMoney) {
-                    maxMoney += gameMoney;
+                    maxMoney = gameMoney;
                     maxRoll = rolls;
                 }
             }
@@ -64,9 +63,6 @@ function validateItems() {
 
     //Game Over
     
-    // We are returning false so that the form doesn't submit 
-    // and so that we can see the results
-    //return false;
     document.getElementById("results").style.display = "inline"; //consider inline
     document.getElementById("resultHead").style.display = "inline";
     document.getElementById("submitButton").innerText = "Recalculate";
