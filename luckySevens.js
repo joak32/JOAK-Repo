@@ -18,7 +18,6 @@ function findMax() {
     }
 }
 
-
 function validateItems() {
     var startingNum = Number(document.forms["wallet"]["startingBet"].value);
     var gameMoney=startingNum;
@@ -51,22 +50,16 @@ function validateItems() {
             else {
                 gameMoney -= 1;
             }
-            //rollArray.push(rolls);
             moneyArray.push(gameMoney);
         }
-
-        //var countRolls = rollArray.length;
-        //var maxMoney = findMax(moneyArray);
-        //var rollsMaxIndex = rollArray.indexOf(maxMoney);
-       // var rollAtMax = rollArray[rollsMaxIndex];
     }
 
     //Game Over
     
-    document.getElementById("results").style.display = "inline"; //consider inline
+    document.getElementById("results").style.display = "inline";
     document.getElementById("resultHead").style.display = "inline";
     document.getElementById("submitButton").innerText = "Recalculate";
-    document.getElementById("initialBet").innerText = ("$" + startingNum + ".00"); //Number(num1) + Number(num2);
+    document.getElementById("initialBet").innerText = ("$" + startingNum + ".00");
     document.getElementById("totalRolls").innerText = rolls;
     document.getElementById("highestAmount").innerText = ("$" + maxMoney + ".00");
     document.getElementById("rollAtHigh").innerText = maxRoll;

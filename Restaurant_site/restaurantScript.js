@@ -1,17 +1,18 @@
-/* Start with one function, if it doesn't work, use multiple */
-
 function validateItems() {
+    /* The following are the variable names of the input from the form;
+        they may be sent elsewhere to be stored */
     var validName = document.getElementById("inputName").value;
     var validEmail = document.getElementById("inputEmail").value;
     var validPhone = document.getElementById("inputPhone").value;
     var validReason = document.getElementById("selectReason").value;
     var validInfo = document.getElementById("inputMore").value;
-
     var validBeenToRestaurant = document.getElementById("beenHere").value;
+
+    /*These in particular are used to concatenate a string (dayString) containing the
+        best days to contact the user */
     var allDays = document.getElementsByName("checkDay");
     var dayString = "";
-    var i;
-    for (i = 0; i < allDays.length; i++) {
+    for (var i = 0; i < allDays.length; i++) {
         if (allDays[i].checked) {
             dayString = dayString + allDays[i].value + " ";
         }
@@ -36,32 +37,9 @@ function validateItems() {
         document.forms["contactInfo"]["validReason"].focus();
         return false;
     }
-}
-
-
-/* Let's just make separate functions
-Something like "Information successfully submitted */
-
-function validateName() {
-    var name = String(document.forms["contactInfo"]["inputName"]).value;
-
-    if (name.length > 0) {
-        return true;
+    
+    if ((validName.length > 0) && (validEmail.length > 0) && (validReason.length > 0)) {
+        alert("The form has been submitted and the information is valid.");
     }
-}
-
-function validateEmail() {
-    var email = String(document.forms["contactInfo"]["inputName"]).value;
-
-    if (email.length > 0) {
-        return true;
-    }
-}
-
-function validatePhone() {
-    var phoneNumber  = String(document.forms["contactInfo"]["inputPhone"]).value;
-}
-
-function validateReason() {
-    var getReason = document.getElementById("selectReason");
+    return false;
 }
