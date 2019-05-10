@@ -17,10 +17,10 @@
         <div class="container" style="text-align: left">
         <h1>Todo List</h1>
         <br />
-        <form name="objective" onsubmit="return validateForms();">
+        <form name="taskForm" onsubmit="addTask();">
             <div class="form-group col-md-4 col-sm">
                 <label for="enterTask">Task</label>
-                <input type="todoTask" class="form-control" id="enterTask">
+                <input type="text" class="form-control" id="enterTask">
                     <div class="input-group mb-3"></div>
             </div>
             <div class="form-group">
@@ -30,10 +30,24 @@
             </div>
                 
 
-            <button type="submit" id="submitButton" class="btn btn-default">Submit</button>
+            <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
 
         </form>
         <hr />
+        <!-- tasks go here -->
+        <!--<div class="container">
+
+
+        </div>-->
+        <!--<div class="container.fluid">
+            <div class="row" id="addedTasks">
+                <div class="alert alert-primary alert-dismissable" role="alert">fcffffffffblah</div>
+            </div>
+            </div><-->
+        <div class="container">
+        <div class="row" id="display">
+        <!--<div id="display"></div>-->
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
