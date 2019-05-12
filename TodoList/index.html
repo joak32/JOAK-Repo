@@ -23,7 +23,7 @@
         <br />
         <section id="cover">
         <div class="container" id="formContainer" style="text-align: left">
-        <form name="taskForm" id="formInfo" onsubmit="addTask();">
+        <form name="taskForm" id="formInfo" onsubmit="return validateForms();">
             <div class="form-group ">
                 <label for="enterTask">Task</label>
                 <input type="text" class="form-control" id="enterTask" pattern="[A-Za-z\s]+">

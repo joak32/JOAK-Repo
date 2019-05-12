@@ -2,12 +2,6 @@
     display: flex;
 }
 
-
-body {
-    margin: auto;
-    text-align: center;
-}
-
 header {
     text-align: center;
 }
@@ -17,20 +11,13 @@ header {
     width: 80%;
 }
 
-form {
-    margin: auto;
-}
-
 #formContainer {
     align-items: center;
     align-content: center;
-    
+    padding-left: 15%;
 }
 
-#formInfo {
-    margin: 0 auto;
-}
-
-#enterTask {
-    text-align: left;
+#display {
+    width: 80%;
+    padding-left: 18%;
 }
