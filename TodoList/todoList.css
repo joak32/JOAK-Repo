@@ -1,3 +1,36 @@
 .container fluid {
     display: flex;
 }
+
+
+body {
+    margin: auto;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+}
+
+.form-control {
+    align-content: center;
+    width: 80%;
+}
+
+form {
+    margin: auto;
+}
+
+#formContainer {
+    align-items: center;
+    align-content: center;
+    
+}
+
+#formInfo {
+    margin: 0 auto;
+}
+
+#enterTask {
+    text-align: left;
+}
